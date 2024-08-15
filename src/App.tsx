@@ -6,6 +6,18 @@ const LINKS = {
     youtube: 'https://www.youtube.com/results?search_query='
 }
 
+const is_production = process.env.show_footer;
+
+function Footer() {
+    return (
+        <footer>
+            <span>
+                Visita el repo del proyecto en <a href="https://github.com/beresiartejuan/mimic" target="_blank">Github</a>.
+            </span>
+        </footer>
+    )
+}
+
 export default function App() {
 
     const { handler, submit } = useSearch();
@@ -27,6 +39,7 @@ export default function App() {
                     </a>
                 </ul>
             </main>
+            {is_production && <Footer></Footer>}
         </>
     )
 }

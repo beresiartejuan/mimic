@@ -17,8 +17,8 @@ main {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-    min-width: 40vw;
-    max-width: 60vw;
+    min-width: calc(35vw + 10em);
+    max-width: 80vw;
 }
 
 h1 {
@@ -57,11 +57,26 @@ h1 span {
 }
 
 .options-engine a {
-    max-width: calc(2.5rem + 1.3em);
+    max-width: calc(2.1rem + 1.5em);
     cursor: pointer;
 }
 
 .options-engine svg {
     width: 100%;
     height: auto;
+}
+
+footer {
+    margin-top: 9vh;
+    background-color: rgba(1, 10, 27, 0.37);
+    border-radius: 5px;
+    padding: calc(.5vh + 1em) calc(1vw + 1em);
+    border: dashed aliceblue 2px;
+    color: aliceblue;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    font-weight: 600;
 }

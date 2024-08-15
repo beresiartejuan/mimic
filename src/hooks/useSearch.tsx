@@ -14,15 +14,11 @@ export default function useSearch() {
         window.location.href = "https://www.google.com/search?&q=" + search;
     }
 
-    const handler = () => {
-
-        return {
-            onChange: updateSearchInput,
-            value: search,
-            onKeyUp: defaultSearch
-        }
-
-    }
+    const handler = () => ({
+        onChange: updateSearchInput,
+        value: search,
+        onKeyUp: defaultSearch
+    });
 
     const submit = (url: string) => {
 
@@ -31,10 +27,7 @@ export default function useSearch() {
             window.location.href = (new URL(url + search)).toString();
         }
 
-        return {
-            onClick
-        }
-
+        return { onClick }
     }
 
     return { search, updateSearchInput, handler, submit };
