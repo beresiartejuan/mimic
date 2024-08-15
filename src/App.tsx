@@ -6,8 +6,6 @@ const LINKS = {
     youtube: 'https://www.youtube.com/results?search_query='
 }
 
-const is_production = process.env.show_footer ? true : false;
-
 function Footer() {
     return (
         <footer>
@@ -39,7 +37,7 @@ export default function App() {
                     </a>
                 </ul>
             </main>
-            {is_production && <Footer></Footer>}
+            <Footer></Footer>
         </>
     )
 }
