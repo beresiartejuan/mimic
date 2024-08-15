@@ -6,7 +6,7 @@ const LINKS = {
     youtube: 'https://www.youtube.com/results?search_query='
 }
 
-const is_production = process.env.show_footer;
+const is_production = process.env.show_footer ? true : false;
 
 function Footer() {
     return (
